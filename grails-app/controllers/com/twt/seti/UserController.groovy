@@ -4,6 +4,8 @@ import org.springframework.dao.DataIntegrityViolationException
 
 class UserController {
 
+    static navigation = true
+
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
     def index() {
@@ -98,5 +100,12 @@ class UserController {
             flash.message = message(code: 'default.not.deleted.message', args: [message(code: 'user.label', default: 'User'), id])
             redirect(action: "show", id: id)
         }
+    }
+
+    def setCurrentLayout() {
+        // session = Sessions.getCurrent()
+
+        session.setAttribute("CurrentLayout", params.CurrentLayout)
+        redirect(controller: "login", action: "Index")
     }
 }

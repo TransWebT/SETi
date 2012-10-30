@@ -7,7 +7,9 @@ class UrlMappings {
 			}
 		}
 
-		"/"(view:"/index")
+        // This is the original setting
+		// "/"(view:"/index")
+        "/"(view: "/index")
 		"500"(view:'/error')
 	}
 }

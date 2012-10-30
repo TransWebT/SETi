@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta name="layout" content="main"/>
+        <meta name="layout" content="main"/>
 		<title>Welcome to Grails</title>
 		<style type="text/css" media="screen">
 			#status {
@@ -81,6 +81,10 @@
 		</style>
 	</head>
 	<body>
+    <sec:ifNotLoggedIn>
+        <meta http-equiv="REFRESH" content="0;url=login/auth">
+    </sec:ifNotLoggedIn>
+    <sec:ifLoggedIn>
 		<a href="#page-body" class="skip"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div id="status" role="complementary">
 			<h1>Application Status</h1>
@@ -104,10 +108,10 @@
 		</div>
 		<div id="page-body" role="main">
 			<h1>Welcome to SETi</h1>
+            <p>Layout: ${session?.CurrentLayout}</p>
 			<p>SETi - Server Environment Tracker.  SETi makes it possible to review available server environments and
             make reservations for server resources.</p>
 
-            <!--
 			<div id="controller-list" role="navigation">
 				<h2>Available Controllers:</h2>
 				<ul>
@@ -116,7 +120,7 @@
 					</g:each>
 				</ul>
 			</div>
-			-->
 		</div>
+        </sec:ifLoggedIn>
 	</body>
 </html>

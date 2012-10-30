@@ -7,7 +7,7 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<title><g:layoutTitle default="SETi"/></title>
+		<title><g:layoutTitle default="Grails"/></title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" href="${resource(dir: 'images', file: 'favicon.ico')}" type="image/x-icon">
 		<link rel="apple-touch-icon" href="${resource(dir: 'images', file: 'apple-touch-icon.png')}">
@@ -17,23 +17,22 @@
         <z:resources/>
         <g:layoutHead/>
 		<r:layoutResources />
-        <g:if test="${session?.CurrentLayout != 'zkmain'}">
-            <nav:resources/>
-        </g:if>
+
+        <nav:resources/>
 	</head>
 	<body>
 		<div id="grailsLogo" role="banner"><a href="http://grails.org"><img src="${resource(dir: 'images', file: 'seti_small.png')}" alt="SETi"/></a>
+
             <span id="banner_controls">
                 <div id='layout_select_container'>
                     <label for="layout">
                         <g:message code="layout.select.label" default="Layout"/>:
                     </label>
-                    <g:select name="CurrentLayout" from="${['Classic', 'Zk-based']}"
-                              keys="${['main', 'zkmain']}"
-                              value="${session?.CurrentLayout}"
+                    <g:select name="layout" from="${['Classic', 'Zk-based']}"
+                              value="${['main', 'zkmain']}"
                               onchange="${remoteFunction(controller: 'User', action: 'setCurrentLayout',
-                                      update: [success: 'great', failure: 'ohno'],
-                                      params: '\'CurrentLayout=\' + this.value')}"/>
+                                          update: [success: 'great', failure: 'ohno'],
+                                          params: '\'layout=\' + this.value')}"/>
                 </div>
 
                 <div id='login_link_container'>
@@ -52,7 +51,6 @@
                 </div>
             </span>
 
-        <g:if test="${session?.CurrentLayout == 'zkmain'}">
             <z:style>
                 .z-menubar-hor, .z-menubar-ver {
                         border: 1px solid #D8D8D8;
@@ -105,15 +103,7 @@
                     </z:menupopup>
                 </z:menu>
             </z:menubar>
-        </g:if>
         </div>
-        <sec:ifLoggedIn>
-            <g:if test="${session?.CurrentLayout != 'zkmain'}">
-                <div id="menu">
-                    <nav:render/>
-                </div>
-            </g:if>
-        </sec:ifLoggedIn>
 
 		<g:layoutBody/>
 		<div class="footer" role="contentinfo">&#169; 2012 ACME Desert Pianos and Anvils</div>

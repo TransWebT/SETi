@@ -51,6 +51,15 @@
           <root url="jar://$USER_HOME$/.grails/ivy-cache/org.springframework.security/spring-security-core/jars/spring-security-core-3.0.7.RELEASE.jar!/" />
           <root url="jar://$USER_HOME$/.grails/ivy-cache/org.springframework/spring-test/jars/spring-test-3.1.0.RELEASE.jar!/" />
           <root url="jar://$USER_HOME$/.grails/ivy-cache/javax.activation/activation/jars/activation-1.1.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.zkoss.zk/zhtml/jars/zhtml-6.5.0.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.zkoss.zk/zkplus/jars/zkplus-6.5.0.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.beanshell/bsh/jars/bsh-2.0b4.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.zkoss.common/zel/jars/zel-6.5.0.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.zkoss.common/zcommon/jars/zcommon-6.5.0.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.zkoss.common/zweb/jars/zweb-6.5.0.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.zkoss.zk/zk/jars/zk-6.5.0.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.zkoss.zk/zul/jars/zul-6.5.0.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.zkoss.zk/zkbind/jars/zkbind-6.5.0.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
