@@ -16,7 +16,7 @@ class User extends SecUser {
         firstName(blank:false)
         middleName(nullable:true)
         email(nullable:true, email:true)
-        modifiedBy()
+        modifiedBy(nullable: true) // have to allow for bootstrapping first user
         dateCreated()
         lastUpdated()
     }

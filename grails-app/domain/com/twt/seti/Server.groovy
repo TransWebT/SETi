@@ -19,7 +19,7 @@ class Server {
         name(unique:true, blank:false)
         ipAddress(blank:false)
         description(unique: false, blank: true, maxSize: 1000)
-        serverType(nullalb: true)
+        serverType(nullable: true)
         displayOrder(nullable:true)
         lastUpdated()
         modifiedBy()
