@@ -1,0 +1,54 @@
+<zk>
+	<window apply="com.twt.seti.CalendarTestComposer" width="100%" height="600px" border="1">
+		<borderlayout id="main" vflex="1">
+			<center border="none">
+				<calendars id="calendars" firstDayOfWeek="Sunday" timeZone="Tokyo=GMT+9,Stockholm=GMT+1" model="${cm}" mold="default">
+					<toolbar sclass="calendar-toolbar">
+						<div class="float-left">
+							<hbox>
+								divarrow type="arrow-left"
+								divarrow type="arrow-right"
+								<div>
+									<button mold="os" label="today" forward="onToday"/>
+									<button mold="os" label="Switch TimeZone" />
+									<span id="FDOW">
+										First Day of Week:
+										<listbox mold="select" >
+											<listitem label="${each}" forEach="Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday" />
+										</listbox>
+									</span>
+									<separator orient="vertical" />
+									<label id="label" />
+									<toolbarbutton label="Refresh" class="refresh" />
+								</div>
+							</hbox>
+						</div>
+						<div class="float-right">
+							<hbox>
+								divtab forEach="Day,Week,5 Days, Month" text="${each}"
+							</hbox>
+						</div>
+					</toolbar>
+				</calendars>
+			</center>
+			<south if="${hasPE}" open="false" size="300px" flex="true" title="Events Analysis" collapsible="true">
+				<hbox>
+					<chart id="mychart" title="Current Events Chart" width="600" height="250" type="pie" fgAlpha="128" />
+					<n:div xmlns:n="http://www.zkoss.org/2005/zk/native" style="padding: 5px;font-family:verdana,arial,helvetica,sans-serif;color:#0F3B82;font-size:18px">
+						ZK Calendars enables Ajax applications to deliver the rich functionality of time management in pure Java. 
+						It can be integrated into enterprise application with ease.
+						With ZK Calendars functionality,
+						developers can create collaborative and dynamic enterprise applications like never before.
+						<n:br />
+						ZK Calendars supports day, weekly, and monthly views, moreover,
+						it supports multiple time zones for worldwide users. 
+						Also, developers can leverage Data Model to create the application in seconds!
+					</n:div>
+				</hbox>
+			</south>
+		</borderlayout>
+
+		<button mold="os" label="create" />
+		<button mold="os" label="edit" />
+	</window>
+</zk>

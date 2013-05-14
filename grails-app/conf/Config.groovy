@@ -96,3 +96,7 @@ grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'com.twt.seti.
 grails.plugins.springsecurity.authority.className = 'com.twt.seti.SecRole'
 grails.plugins.springsecurity.requestMap.className = 'com.twt.seti.SecRequestMap'
 grails.plugins.springsecurity.securityConfigType = 'Requestmap'
+
+
+google.analytics.webPropertyID = "UA-40891496-1"
+google.analytics.enabled = true

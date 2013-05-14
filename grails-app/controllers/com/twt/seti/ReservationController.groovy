@@ -101,4 +101,17 @@ class ReservationController {
             redirect(action: "show", id: id)
         }
     }
+
+    def calendar(Long id) {
+        def reservationInstance = Reservation.get(id)
+        /*
+        if (!reservationInstance) {
+            flash.message = message(code: 'default.not.found.message', args: [message(code: 'reservation.label', default: 'Reservation'), id])
+            redirect(action: "list")
+            return
+        }
+        */
+
+        [reservationInstance: reservationInstance]
+    }
 }

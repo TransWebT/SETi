@@ -30,9 +30,10 @@
 			<g:form method="post" >
 				<g:hiddenField name="id" value="${reservationInstance?.id}" />
 				<g:hiddenField name="version" value="${reservationInstance?.version}" />
-				<fieldset class="form">
-					<g:render template="form"/>
-				</fieldset>
+
+                z:include src="/zkCalendar/calendarTest.zul" argument="TerryParm" anotherArg="one, two, three"
+                <z:include src="/zkCalendar/indexTest.zul" reservationId="1" />
+
 				<fieldset class="buttons">
 					<g:actionSubmit class="save" action="update" value="${message(code: 'default.button.update.label', default: 'Update')}" />
 					<g:actionSubmit class="delete" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" formnovalidate="" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />

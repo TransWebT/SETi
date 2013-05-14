@@ -1,0 +1,7 @@
+<zk>
+<window title="include calendar demo" width="300px" border="1" apply="com.twt.seti.CalendarComposer">
+    <label  style="color: red" forEach="${anotherArg}" value="${each}::: " />
+</window>
+
+<calendars />
+</zk>
